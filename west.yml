@@ -20,20 +20,20 @@ manifest:
       remote: JsmnRepo
     - name: memfault-firmware-sdk
       path: modules/memfault-firmware-sdk
-      revision: 0.11.2
+      revision: 0.16.1
       remote: LairdCP
     - name: Pinnacle-100-firmware
       path: pinnacle_100_firmware
-      revision: ca0157c1f1849bd40888ff23a7e3a6749c46ebb9
+      revision: cac6e3dee2a794cfbef5580708bbc844327af99e
       remote: LairdCP
     - name: sdk-nrf
       path: nrf
-      revision: a1e9002a192f594a19b0f434c4f3b0894e560288
+      revision: 687493d3365292c47487cf91c89b921a7950589f
       remote: LairdCP
       import: true
     - name: zephyr
       west-commands: scripts/west-commands.yml
-      revision: 4ce908a2342494c19df09f347ce79ab81b415185
+      revision: 70ec734b87c382c3bcd8316c4e622b27111152af
       remote: LairdCP
       import: true
     - name: zephyr_boards
@@ -42,7 +42,7 @@ manifest:
       remote: LairdCP
     - name: zephyr_lib
       path: modules/zephyr_lib
-      revision: 117023cddec2662f0f65242e990c0af21dbaa1ff
+      revision: 2446cf059ce53bd9580f44b4d699de1251c993c9
       remote: LairdCP
 
   self:

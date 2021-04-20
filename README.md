@@ -6,6 +6,8 @@ See the user guide for the firmware [here](https://github.com/LairdCP/Pinnacle-1
 
 ## Cloning Firmware
 
+> **WARNING:** On Windows do not clone into a starting folder path longer than 12 characters or else the firmware will not build.
+
 This is a Zephyr `west` manifest repository. To learn more about `west` see [here](https://docs.zephyrproject.org/latest/guides/west/index.html).
 
 To clone this repository properly use the `west` tool. To install `west` you will first need Python3.
@@ -24,7 +26,10 @@ Once `west` is installed, clone this repository using `west init` and `west upda
 
 ```
 # Checkout the latest manifest on main
-west init -m https://github.com/LairdCP/Pinnacle-100-Firmware-Manifest.git --manifest-rev main
+west init -m https://github.com/LairdCP/Pinnacle-100-Firmware-Manifest.git --mr main
+
+# OR checkout the 4.1.0 release
+west init -m https://github.com/LairdCP/Pinnacle-100-Firmware-Manifest.git --mr 4.1.0
 
 # Now, pull all the source described in the manifest
 west update
