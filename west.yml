@@ -4,15 +4,13 @@ manifest:
       url-base: https://github.com/zserge
     - name: LairdCP
       url-base: https://github.com/LairdCP
-    - name: ncs
-      url-base: https://github.com/nrfconnect
 
   # Please add items below based on alphabetical order.
   # These dependencies may need updating if new features are added to the firmware.
   projects:
     - name: zephyr_framework
       path: modules/framework
-      revision: ab025edc9245cedfd82c90d3054f168dd9f1f1cb
+      revision: f7a5a53a84672f7ff81a845fda45600c3cd9343d
       remote: LairdCP
     - name: jsmn
       path: modules/jsmn
@@ -20,11 +18,11 @@ manifest:
       remote: JsmnRepo
     - name: memfault-firmware-sdk
       path: modules/memfault-firmware-sdk
-      revision: 0.16.1
+      revision: 4c65ec61a5d3ad1f5f390813b073646629efe744
       remote: LairdCP
     - name: Pinnacle-100-firmware
       path: pinnacle_100_firmware
-      revision: cac6e3dee2a794cfbef5580708bbc844327af99e
+      revision: 2b7bd598f7468c98248959e0258c6accaa6dcd21
       remote: LairdCP
     - name: sdk-nrf
       path: nrf
@@ -32,17 +30,42 @@ manifest:
       remote: LairdCP
       import: true
     - name: zephyr
-      west-commands: scripts/west-commands.yml
-      revision: 70ec734b87c382c3bcd8316c4e622b27111152af
+      revision: 051d435d555f9c25082a43451fa8c8605307a270
       remote: LairdCP
-      import: true
+      import:
+        # In addition to the zephyr repository itself, NCS also
+        # imports the contents of zephyr/west.yml.
+        # Only the projects explicitly named in the
+        # following whitelist are imported.
+        #
+        # Note that the zephyr west extensions (like 'build', 'flash',
+        # 'debug', etc.) are automatically provided by this import, so
+        # there's no need to add a redundant west-commands: key for
+        # the zephyr project.
+        #
+        # Please keep this list sorted alphabetically.
+        name-whitelist:
+          - cmsis
+          - fatfs
+          - libmetal
+          - littlefs
+          - mbedtls
+          - mcumgr
+          - mipi-sys-t
+          - net-tools
+          - nrf_hw_models
+          - open-amp
+          - openthread
+          - segger
+          - tinycbor
+          - tinycrypt
     - name: zephyr_boards
       path: pinnacle_100_firmware/boards/arm
-      revision: f12ea491dc15ea927bdd5a83d30049aea4811b27
+      revision: 725ba1646c6a7b358d072a334fe14ccd87a43afa
       remote: LairdCP
     - name: zephyr_lib
       path: modules/zephyr_lib
-      revision: 2446cf059ce53bd9580f44b4d699de1251c993c9
+      revision: 445e304c8a398b332bd5c1b769003aa4f0ac9121
       remote: LairdCP
 
   self:
