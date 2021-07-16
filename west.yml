@@ -16,21 +16,17 @@ manifest:
       path: modules/jsmn
       revision: 7b6858a5855299d173c5ab2b46e611bf9961cbef
       remote: JsmnRepo
-    - name: memfault-firmware-sdk
-      path: modules/memfault-firmware-sdk
-      revision: 4c65ec61a5d3ad1f5f390813b073646629efe744
-      remote: LairdCP
     - name: Pinnacle-100-firmware
       path: pinnacle_100_firmware
-      revision: 2b7bd598f7468c98248959e0258c6accaa6dcd21
+      revision: e50cd3c13afd60d43a6d27f26d1de05bb61f04cc
       remote: LairdCP
     - name: sdk-nrf
       path: nrf
-      revision: 687493d3365292c47487cf91c89b921a7950589f
+      revision: v1.6.0
       remote: LairdCP
       import: true
     - name: zephyr
-      revision: 051d435d555f9c25082a43451fa8c8605307a270
+      revision: 48ec18e87c38b82f9d36d7daf1616b295a581ae7
       remote: LairdCP
       import:
         # In addition to the zephyr repository itself, NCS also
@@ -47,6 +43,7 @@ manifest:
         name-whitelist:
           - cmsis
           - fatfs
+          - hal_nordic
           - libmetal
           - littlefs
           - mbedtls
@@ -61,11 +58,11 @@ manifest:
           - tinycrypt
     - name: zephyr_boards
       path: pinnacle_100_firmware/boards/arm
-      revision: 725ba1646c6a7b358d072a334fe14ccd87a43afa
+      revision: 3c3e2e7ecadfb3e85a644c54ee4bee4069cb479c
       remote: LairdCP
     - name: zephyr_lib
       path: modules/zephyr_lib
-      revision: 445e304c8a398b332bd5c1b769003aa4f0ac9121
+      revision: fc3fe2d8ea746928eebba7b4b62764d576f4393a
       remote: LairdCP
 
   self:
