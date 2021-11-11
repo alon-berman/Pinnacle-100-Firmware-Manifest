@@ -2,7 +2,7 @@
 
 ## Using the Firmware
 
-See the user guide for the firmware [here](https://github.com/LairdCP/Pinnacle-100-Firmware/blob/main/README.md)
+See the user guide for the firmware [here](https://lairdcp.github.io/guides/ble-gateway-firmware/1.0/Introduction.html)
 
 ## Cloning Firmware
 
@@ -28,8 +28,8 @@ Once `west` is installed, clone this repository using `west init` and `west upda
 # Checkout the latest manifest on main
 west init -m https://github.com/LairdCP/Pinnacle-100-Firmware-Manifest.git --mr main
 
-# OR checkout the 5.0.0 release
-west init -m https://github.com/LairdCP/Pinnacle-100-Firmware-Manifest.git --mr v5.0.0
+# OR checkout the 6.0.0 release
+west init -m https://github.com/LairdCP/Pinnacle-100-Firmware-Manifest.git --mr v6.0.0
 
 # Now, pull all the source described in the manifest
 west update
@@ -39,13 +39,25 @@ west update
 
 If this is your first time working with a Zephyr project on your computer you should follow the [Zephyr getting started guide](https://docs.zephyrproject.org/latest/getting_started/index.html#) to install all the tools.
 
-The firmware uses zephyr 2.4.x, so GCC 9 is recommended.
-[GNU Arm Embedded Toolchain: 9-2020-q2-update](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) is recommended.
+The firmware uses zephyr 2.6.99 (2.7.0 dev branch), so GCC 10 is recommended.
+[GNU Arm Embedded Toolchain: 10.3-2021.07](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads) is recommended.
 
-See here to [setup the GNU ARM Embedded tools](https://docs.zephyrproject.org/2.4.0/getting_started/toolchain_3rd_party_x_compilers.html#gnu-arm-embedded)
+See here to [setup the GNU ARM Embedded tools](https://docs.zephyrproject.org/2.7.0/getting_started/toolchain_3rd_party_x_compilers.html)
 
-If using Linux, v0.11.4 of the Zephyr SDK is recommended.
+If using Linux or macOS, v0.13.1 of the Zephyr SDK is recommended.
 
 ## Building the Firmware
 
-See [here for build commands](https://github.com/LairdCP/Pinnacle-100-Firmware/blob/main/docs/readme_ltem_aws.md#building-the-firmware).
+> **WARNING:** Before building the firmware, be sure to install all dependencies using the `nrf/scripts/requirements-fixed.txt`
+
+From the directory where you ran `west update`, issue the following command:
+
+```
+# Linux
+pip3 install --user -r nrf/scripts/requirements-fixed.txt
+
+# macOS and Windows
+pip3 install -r nrf/scripts/requirements-fixed.txt
+```
+
+See [here for build commands](https://lairdcp.github.io/guides/ble-gateway-firmware/1.0/docs/readme_aws.html#building-the-firmware).

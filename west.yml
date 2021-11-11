@@ -8,25 +8,29 @@ manifest:
   # Please add items below based on alphabetical order.
   # These dependencies may need updating if new features are added to the firmware.
   projects:
+    - name: attributes
+      path: modules/attributes
+      revision: 5a56aad47e94950e8301708da5f30cb9fcf7515f
+      remote: LairdCP
     - name: zephyr_framework
       path: modules/framework
-      revision: f7a5a53a84672f7ff81a845fda45600c3cd9343d
+      revision: 83f6016390290b30c93bb55b854051bbcde532b9
       remote: LairdCP
     - name: jsmn
       path: modules/jsmn
       revision: 7b6858a5855299d173c5ab2b46e611bf9961cbef
       remote: JsmnRepo
-    - name: Pinnacle-100-firmware
-      path: pinnacle_100_firmware
-      revision: e50cd3c13afd60d43a6d27f26d1de05bb61f04cc
+    - name: BLE_Gateway_Firmware
+      path: ble_gateway_firmware
+      revision: cca11e27961062829d90c106b2809b1dc048744b
       remote: LairdCP
     - name: sdk-nrf
       path: nrf
-      revision: v1.6.0
+      revision: v1.7.0
       remote: LairdCP
       import: true
     - name: zephyr
-      revision: 48ec18e87c38b82f9d36d7daf1616b295a581ae7
+      revision: e17f778aaaf3b2b39fa99b2a6b627583ca6429ec
       remote: LairdCP
       import:
         # In addition to the zephyr repository itself, NCS also
@@ -57,12 +61,12 @@ manifest:
           - tinycbor
           - tinycrypt
     - name: zephyr_boards
-      path: pinnacle_100_firmware/boards/arm
-      revision: 3c3e2e7ecadfb3e85a644c54ee4bee4069cb479c
+      path: boards/arm
+      revision: e529f3c110dd661f1d10f84ad325a7c0238411c9
       remote: LairdCP
     - name: zephyr_lib
       path: modules/zephyr_lib
-      revision: fc3fe2d8ea746928eebba7b4b62764d576f4393a
+      revision: 3f49268509e2026d7c8c8e285d8f24a783979d8b
       remote: LairdCP
 
   self:
