@@ -22,7 +22,7 @@ manifest:
       remote: JsmnRepo
     - name: BLE_Gateway_Firmware
       path: ble_gateway_firmware
-      revision: cca11e27961062829d90c106b2809b1dc048744b
+      revision: 610a780c508c52f4edb9d9fc022d14c4dcef9d9a
       remote: LairdCP
     - name: sdk-nrf
       path: nrf
@@ -30,7 +30,7 @@ manifest:
       remote: LairdCP
       import: true
     - name: zephyr
-      revision: e17f778aaaf3b2b39fa99b2a6b627583ca6429ec
+      revision: 0f11885cc36fe5a13812a582268867ed59f7dc1b
       remote: LairdCP
       import:
         # In addition to the zephyr repository itself, NCS also
