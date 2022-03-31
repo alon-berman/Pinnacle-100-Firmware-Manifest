@@ -28,8 +28,8 @@ Once `west` is installed, clone this repository using `west init` and `west upda
 # Checkout the latest manifest on main
 west init -m https://github.com/LairdCP/Pinnacle-100-Firmware-Manifest.git --mr main
 
-# OR checkout the 6.0.0 release
-west init -m https://github.com/LairdCP/Pinnacle-100-Firmware-Manifest.git --mr v6.0.0
+# OR checkout the 6.2.0 release
+west init -m https://github.com/LairdCP/Pinnacle-100-Firmware-Manifest.git --mr v6.2.0
 
 # Now, pull all the source described in the manifest
 west update

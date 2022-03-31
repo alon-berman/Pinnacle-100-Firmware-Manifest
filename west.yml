@@ -9,20 +9,20 @@ manifest:
   # These dependencies may need updating if new features are added to the firmware.
   projects:
     - name: attributes
-      path: modules/attributes
-      revision: 5a56aad47e94950e8301708da5f30cb9fcf7515f
+      path: modules/lib/laird_connect/attributes
+      revision: d483d230e02266d43e369adc75afc1044ee5c06f
       remote: LairdCP
     - name: zephyr_framework
-      path: modules/framework
+      path: modules/lib/laird_connect/framework
       revision: 83f6016390290b30c93bb55b854051bbcde532b9
       remote: LairdCP
     - name: jsmn
-      path: modules/jsmn
-      revision: 7b6858a5855299d173c5ab2b46e611bf9961cbef
+      path: modules/lib/jsmn
+      revision: 053d3cd29200edb1bfd181d917d140c16c1f8834
       remote: JsmnRepo
     - name: BLE_Gateway_Firmware
       path: ble_gateway_firmware
-      revision: 610a780c508c52f4edb9d9fc022d14c4dcef9d9a
+      revision: df1c4595e19d11da89b3b3f244c402508ad4e46f
       remote: LairdCP
     - name: sdk-nrf
       path: nrf
@@ -30,7 +30,7 @@ manifest:
       remote: LairdCP
       import: true
     - name: zephyr
-      revision: 0f11885cc36fe5a13812a582268867ed59f7dc1b
+      revision: 8ad614587652ba7f897f2016db4d2dd7336161ed
       remote: LairdCP
       import:
         # In addition to the zephyr repository itself, NCS also
@@ -50,6 +50,7 @@ manifest:
           - hal_nordic
           - libmetal
           - littlefs
+          - lvgl
           - mbedtls
           - mcumgr
           - mipi-sys-t
@@ -65,7 +66,7 @@ manifest:
       revision: e529f3c110dd661f1d10f84ad325a7c0238411c9
       remote: LairdCP
     - name: zephyr_lib
-      path: modules/zephyr_lib
+      path: modules/lib/laird_connect/zephyr_lib
       revision: 3f49268509e2026d7c8c8e285d8f24a783979d8b
       remote: LairdCP
 
