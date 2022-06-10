@@ -22,7 +22,7 @@ manifest:
       remote: JsmnRepo
     - name: BLE_Gateway_Firmware
       path: ble_gateway_firmware
-      revision: df1c4595e19d11da89b3b3f244c402508ad4e46f
+      revision: b77d880ae535d2edf7f6e15e33b039587b8841e9
       remote: LairdCP
     - name: sdk-nrf
       path: nrf
