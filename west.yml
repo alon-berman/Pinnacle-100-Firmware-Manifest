@@ -22,7 +22,11 @@ manifest:
       remote: JsmnRepo
     - name: BLE_Gateway_Firmware
       path: ble_gateway_firmware
-      revision: b77d880ae535d2edf7f6e15e33b039587b8841e9
+      revision: bffe87dea0c587e2c30fe90388b889ca5bda283b
+      remote: LairdCP
+    - name: memfault-firmware-sdk
+      path: modules/lib/memfault-firmware-sdk
+      revision: 0.31.2
       remote: LairdCP
     - name: sdk-nrf
       path: nrf
@@ -30,7 +34,7 @@ manifest:
       remote: LairdCP
       import: true
     - name: zephyr
-      revision: 8ad614587652ba7f897f2016db4d2dd7336161ed
+      revision: fec5a93676aaccdb15412b1ca197e26fbdf5ce0f
       remote: LairdCP
       import:
         # In addition to the zephyr repository itself, NCS also
@@ -67,7 +71,7 @@ manifest:
       remote: LairdCP
     - name: zephyr_lib
       path: modules/lib/laird_connect/zephyr_lib
-      revision: 3f49268509e2026d7c8c8e285d8f24a783979d8b
+      revision: 0d1223f89775436782558334a11ab839527e752b
       remote: LairdCP
 
   self:
