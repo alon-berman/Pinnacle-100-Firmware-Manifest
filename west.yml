@@ -5,7 +5,7 @@ manifest:
     - name: LairdCP
       url-base: https://github.com/LairdCP
     - name: etoot
-        url-base: https://github.com/alon-berman
+      url-base: https://github.com/alon-berman
   # Please add items below based on alphabetical order.
   # These dependencies may need updating if new features are added to the firmware.
   projects:
@@ -23,7 +23,7 @@ manifest:
       remote: JsmnRepo
     - name: BLE_Gateway_Firmware
       path: ble_gateway_firmware
-      revision: bffe87dea0c587e2c30fe90388b889ca5bda283b
+      revision: 0d8da9b634c763f83f182c680c5f19da265cae51
       remote: etoot
     - name: memfault-firmware-sdk
       path: modules/lib/memfault-firmware-sdk
